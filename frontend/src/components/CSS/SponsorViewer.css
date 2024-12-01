@@ -1,0 +1,57 @@
+.sponsor-viewer {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.sponsor-viewer .search-bar {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sponsor-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sponsor-item {
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.sponsor-item:hover {
+    color: darkblue;
+}
+
+.sponsor-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.sponsor-details h2 {
+    margin-top: 0;
+}
+
+.close-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
+}

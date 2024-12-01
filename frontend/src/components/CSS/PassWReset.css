@@ -1,0 +1,145 @@
+/* Reset box-sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Center the form container in the viewport */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Style for the main form */
+.create-account-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Header styles for the form */
+.create-account-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Input field wrapper */
+.input-field {
+    margin-bottom: 15px;
+}
+
+/* Label for each input */
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input and other form fields */
+.input-field input,
+.input-field textarea,
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    min-height: 40px;
+    margin: 0;
+}
+
+/* Focused state for inputs */
+.input-field input:focus,
+.input-field textarea:focus,
+.input-field select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Password strength label */
+.password-strength {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Submit button */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for submit button */
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel link button */
+.cancel-button {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cancel-button:hover {
+    text-decoration: underline;
+}
+
+/* Error message style */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Styles for the strength container */
+.passwordStrength {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left; /* Align text and list items to the left */
+}
+
+/* Styles for the strength bar */
+.strengthBar {
+    height: 10px;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Styles for the password strength text */
+.passwordStrength p {
+    font-size: 0.9em;
+    margin: 5px 0 10px; /* Margin around the password strength text */
+}
+
+/* Styles for the missing criteria list */
+.missingCriteria {
+    list-style-type: disc;
+    padding-left: 20px; /* Adds space to align list items */
+    color: red;
+    font-size: 0.85em; /* Smaller font size for criteria list */
+    margin-top: 5px;
+}
+
+.missingCriteria li {
+    margin-bottom: 3px; /* Spacing between list items */
+}

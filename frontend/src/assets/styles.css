@@ -1,0 +1,413 @@
+:root {
+    /* Main color palette*/
+    --background: #F4F4F9;
+    --foreground: #1E1E2E;
+    --mint: #CBF7ED;
+    --gray-light: #cbcbd1;
+    --blue-lighest: #CDDBEA;
+    --blue-light: #8EA8C3;
+    --blue-med: #23395B;
+    --blue-dark: #161925;
+}
+
+:root.dark-theme {
+    /* Dark mode color palette */
+    --background: #1E1E2E; /* Darker background for dark mode */
+    --foreground: #F4F4F9;
+    --mint: #4DC6B8; /* Darkened mint color for contrast */
+    --gray-1: #7A7A85; /* Darker gray for subtle contrasts */
+    --blue-4: #4A637F; /* Darker blue tone */
+    --blue-3: #617C97; /* Slightly darkened blue-2 for contrast */
+    --blue-2: #1B2A44; /* Darkened version of blue-3 */
+    --blue-1: #0D0F1A; /* Even darker blue-4 for elements like headers */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root.light-theme {
+        /* Main color palette*/
+        --background: #F4F4F9;
+        --foreground: #1E1E2E;
+        --mint: #CBF7ED;
+        --gray-light: #cbcbd1;
+        --blue-lighest: #CDDBEA;
+        --blue-light: #8EA8C3;
+        --blue-med: #23395B;
+        --blue-dark: #161925;
+    }
+    
+    :root {
+        /* Dark mode color palette */
+        --background: #1E1E2E; /* Darker background for dark mode */
+        --foreground: #F4F4F9;
+        --mint: #4DC6B8; /* Darkened mint color for contrast */
+        --gray-1: #7A7A85; /* Darker gray for subtle contrasts */
+        --blue-4: #4A637F; /* Darker blue tone */
+        --blue-3: #617C97; /* Slightly darkened blue-2 for contrast */
+        --blue-2: #1B2A44; /* Darkened version of blue-3 */
+        --blue-1: #0D0F1A; /* Even darker blue-4 for elements like headers */
+    }
+}
+
+
+body {
+    background-color: var(--background);
+}
+
+/* Fonts */
+.font-karla {
+    font-family: 'Karla', sans-serif;
+}
+
+.font-merriweather {
+    font-family: "Merriweather", sans-serif;
+}
+
+/* Navbar */
+.nav {
+    background-color: var(--background);
+    color: var(--blue-med);
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 5rem 0 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 100%;
+}
+
+.site-title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.7;
+    border-bottom: 3px solid transparent;
+}
+
+.nav a:hover {
+    opacity: 1;
+    border-bottom: 3px solid var(--blue-med);
+
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: inline-block;
+    width: 93px;
+    height: 65px;
+    fill: none;
+    stroke: currentColor;
+    stroke-miterlimit: 10;
+    stroke-width: 8px;
+}
+
+/* Landing page content*/
+.banner {
+    position: relative;
+    color: var(--background);
+    text-align: left;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-text-container {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translate(10%, -50%);
+    line-height: 3rem;
+}
+
+/* General use */
+
+.basic-flex {
+    display: flex;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Landing */
+
+.landing-menu {
+    background-color: var(--blue-light);
+    width: 100%;
+    height: 110px;
+    justify-content: center;
+}
+
+.landing-menu-content {
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+.banner-btn-container {
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.banner-btn {
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+#register-banner-btn {
+    background-color: var(--blue-med);
+    color: white;
+}
+
+#login-banner-btn {
+    background-color: var(--mint);
+    color: var(--blue-dark);
+}
+
+.landing-info-parent-container {
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.landing-info-container {
+    justify-content: space-between;
+    padding-top: 1rem;
+    gap: 5rem;
+}
+
+.landing-info-text-container {
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    word-wrap: break-word;
+    width: 33%;
+    color: var(--foreground);
+}
+
+.landing-icon {
+    width: 60px;
+    padding: 1rem 0;
+}
+
+/* About */
+.about-container {
+    width: 50%;
+    padding: 2rem 5rem;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: var(--blue-light);
+    border-radius: 20px;
+}
+
+.about-entry {
+    padding-bottom: 1rem;
+}
+
+.about-entry p, .about-entry h2{
+    display: inline;
+    color: var(--blue-dark);
+}
+
+.about-container h1 {
+    text-align: center;
+}
+
+.flexbox-container-sponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card_sponsor {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 30%;
+    margin: auto;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .sponsor-button {
+    height:50px;
+    width:150px;
+    border-radius: 10px;
+  }
+
+/* Sidebar dashboard */
+.dash-sidebar {
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--background);
+    box-shadow: 0.2rem 0.1rem 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dash-element {
+    display: block;
+    padding: 1rem 1rem 1rem 2rem;
+    text-decoration: none;
+    color: var(--blue-med);
+}
+
+.dash-sidebar a, .dash-sidebar a:visited {
+    text-decoration: none;
+    color: var(--blue-4);
+    font-weight: bold;
+}
+
+.dash-sidebar a:hover {
+    border-bottom: 3px solid var(--blue-med);
+    color: var(--blue-2);
+}
+
+.dash-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dash-element a {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.dash-element h3 {
+    text-align: center;
+}
+
+/* Dashboard */
+/* Container that takes up right side next to side nav */
+.dashboard {
+    padding-top: 3rem;
+    padding-left: 19rem;
+    background-color: var(--blue-lighest);
+    width: 100%;
+    height: 100%;
+    color: var(--blue-med);
+}
+
+/* Container for box that fills entire dashboard */
+.dash-main-container {
+    background-color: var(--background);
+    margin: 0.5rem;
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 3rem;
+    overflow-y: scroll;
+
+}
+
+.welcome-widget, .bottom-widget-bar {
+    padding: 5rem;
+    width: 95%;
+    min-width: 20rem;
+    height: 20rem;
+}
+
+.welcome-widget, .bottom-widget {
+    background-color: var(--background);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.bottom-widget-bar {
+    margin-top: 2rem;
+    justify-content: space-between;
+    padding-top: 1rem;
+    gap: 1rem;
+    width: 95%;
+}
+
+.bottom-widget {
+    padding: 2rem;
+    height: 10rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.bottom-widget h1 {
+    padding-top: 1rem;
+    color: var(--blue-dark);
+}
+
+/* Logout text */
+.logout-container {
+    padding-top: 5rem;
+}
+.logout-text {
+    text-align: center;
+    color: var(--blue-2);
+}
+
+/* Sponsor points */
+
+/* Field in form */
+.form-field {
+    display: block;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.form-field label {
+    margin-right: 1rem;
+}
+
+.dash-main-container fieldset {
+    margin-top: 1rem;
+}
+
+.dash-main-container fieldset:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.form-btn {
+    padding: 1rem;
+}
+
+/* Remove form border */
+.dash-main-container form {
+    border: none;
+}
+
+/* Filter buttons  */
+.filter-field {
+    padding: 1rem;
+    display: inline-block;
+}

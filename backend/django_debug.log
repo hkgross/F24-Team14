@@ -1,0 +1,28 @@
+INFO 2024-10-28 13:54:05,495 autoreload Watching for file changes with StatReloader
+INFO 2024-10-28 13:54:17,237 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:54:17,240 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:54:17,561 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:54:17,662 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:34,637 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:34,637 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:35,101 basehttp "GET /api/sponsors/ HTTP/1.1" 200 510
+INFO 2024-10-28 13:55:35,194 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:35,199 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:35,496 basehttp "GET /api/sponsors/ HTTP/1.1" 200 510
+INFO 2024-10-28 13:55:36,173 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:36,173 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:36,173 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:36,173 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:36,403 basehttp "GET /applications/1/ HTTP/1.1" 200 39
+INFO 2024-10-28 13:55:36,416 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:36,422 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:36,522 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:36,769 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:36,769 basehttp "GET /applications/1/ HTTP/1.1" 200 39
+INFO 2024-10-28 13:55:38,527 basehttp "POST /applications/1/ HTTP/1.1" 302 0
+INFO 2024-10-28 13:55:38,527 basehttp "GET /about/ HTTP/1.1" 200 46
+INFO 2024-10-28 13:55:39,864 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:39,865 basehttp "POST /token/refresh/ HTTP/1.1" 200 587
+INFO 2024-10-28 13:55:40,127 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:40,145 basehttp "POST /authentication/profile/ HTTP/1.1" 200 541
+INFO 2024-10-28 13:55:58,461 autoreload C:\Users\tngjo\OneDrive\Desktop\UT14\F24-Team14\backend\backend\settings.py changed, reloading.

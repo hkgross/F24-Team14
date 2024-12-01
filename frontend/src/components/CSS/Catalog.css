@@ -1,0 +1,29 @@
+.itemliststyle {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    padding-top: 80px;
+  }
+.card {
+height: 200px;
+width: 150px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+white-space: nowrap;
+margin: 10px 5px;
+padding: 5px;
+background-color: #757575;
+color: #ffffff;
+}
+
+.card:hover {
+box-shadow: 0 0 0.75rem #ff4081;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

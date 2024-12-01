@@ -1,0 +1,64 @@
+form {
+  border: 3px solid #f1f1f1;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+input[type=text],
+input[type=password],
+button {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  background-color: #8EA8C3;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  background-color: #f44336;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+.errorMessage {
+  color: red;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}

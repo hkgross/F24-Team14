@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="A Web App for Trucker Drivers" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <script>
+    function inIframe() {
+      var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var e = localStorage.getItem("theme");
+      try {
+        return window.self !== window.top;
+      } catch (e) {
+        return true;
+      }
+    }
+
+    function setupThemeButton(argument) {
+      var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var e = localStorage.getItem("theme");
+
+      var dayNightContainer = document.createElement("div");
+      dayNightContainer.className = "darkModeToggleContainer";
+
+      var dayNightButton = document.createElement("div");
+      dayNightButton.className = "btn1_container";
+
+      var dayNightStar = document.createElement("i");
+      dayNightStar.className = "fas fa-star fixed1";
+
+      var dayNightCloud = document.createElement("i");
+      dayNightCloud.className = "fas fa-cloud fixed2";
+
+      var dayNightSun = document.createElement("i");
+      dayNightSun.className = "fas fa-sun fixed3";
+
+      var dayNightMoon = document.createElement("i");
+      dayNightMoon.className = "fas fa-moon fixed4";
+
+      dayNightButton.appendChild(dayNightStar);
+      dayNightButton.appendChild(dayNightCloud);
+      dayNightButton.appendChild(dayNightSun);
+      dayNightButton.appendChild(dayNightMoon);
+      dayNightContainer.appendChild(dayNightButton);
+      if (!inIframe()) {
+        document.body.appendChild(dayNightContainer);
+      }
+
+
+      const btn1_ctn = document.getElementsByClassName("btn1_container")[0];
+      const one = document.querySelector(".fas");
+      console.log(prefersDarkScheme);
+      console.log(e);
+
+      if (e) {
+        console.log('1st if, true')
+        prefersDarkScheme = (e == "dark");
+        console.log(prefersDarkScheme);
+      } else {
+        console.log('1st if, false');
+        console.log(prefersDarkScheme);
+        if (prefersDarkScheme) {
+          console.log('1st if, 1st if, true');
+          localStorage.setItem("theme", "dark");
+        } else {
+          console.log('1st if, 1st if, false');
+          localStorage.setItem("theme", "light");
+        }
+      }
+
+      console.log(prefersDarkScheme);
+      if (prefersDarkScheme) {
+        console.log('2nd if, true');
+        document.getElementsByTagName("html")[0].classList.remove("light-theme");
+        document.getElementsByTagName("html")[0].classList.add("dark-theme");
+        if (!inIframe()) {
+          one.classList.add("active1");
+          btn1_ctn.classList.add("changeBg");
+        }
+      } else {
+        console.log('2nd if, false');
+        document.getElementsByTagName("html")[0].classList.add("light-theme");
+        document.getElementsByTagName("html")[0].classList.remove("dark-theme");
+        if (!inIframe()) {
+          one.classList.remove("active1");
+          btn1_ctn.classList.remove("changeBg");
+        }
+      }
+      if (!inIframe()) {
+        btn1_ctn.addEventListener("click", () => {
+          prefersDarkScheme = !prefersDarkScheme;
+          if (prefersDarkScheme) {
+            document.getElementsByTagName("html")[0].classList.remove("light-theme");
+            document.getElementsByTagName("html")[0].classList.add("dark-theme");
+            localStorage.setItem("theme", "dark");
+            if (!inIframe()) {
+              one.classList.add("active1");
+              btn1_ctn.classList.add("changeBg");
+            }
+          } else {
+            document.getElementsByTagName("html")[0].classList.add("light-theme");
+            document.getElementsByTagName("html")[0].classList.remove("dark-theme");
+            localStorage.setItem("theme", "light");
+            if (!inIframe()) {
+              one.classList.remove("active1");
+              btn1_ctn.classList.remove("changeBg");
+            }
+          }
+        });
+      }
+    }
+
+    function forceLight() {
+      document.getElementsByTagName("html")[0].classList.add("light-theme");
+      document.getElementsByTagName("html")[0].classList.remove("dark-theme");
+    }
+
+    function restoreFunctionality() {
+      var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var e = localStorage.getItem("theme");
+
+      if (prefersDarkScheme) {
+        document.getElementsByTagName("html")[0].classList.remove("light-theme");
+        document.getElementsByTagName("html")[0].classList.add("dark-theme");
+      } else {
+        document.getElementsByTagName("html")[0].classList.add("light-theme");
+        document.getElementsByTagName("html")[0].classList.remove("dark-theme");
+      }
+    }
+    window.onload = function() {
+      //set up light/dark mode toggle
+      setupThemeButton();
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>PandaSoft</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>
