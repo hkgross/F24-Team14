@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@testing-library/react": "^13.0.1",
     "html-to-image": "^1.11.11",
     "react-qr-code": "^2.0.15"
   }
